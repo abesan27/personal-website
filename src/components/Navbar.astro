@@ -1,0 +1,25 @@
+<nav class="sticky top-0 z-50 space-x-8 py-1">
+  <div class="flex items-center justify-between">
+    <a href="/">
+      <h4>
+        <span class="text-fuchsia-800">Albert</span> Stan
+      </h4>
+    </a>
+
+    <div class="flex space-x-5">
+      <a href="/projects">
+        <h6
+          class={`${Astro.url.pathname.includes("projects") ? "text-fuchsia-800" : ""} to-animate`}
+        >
+          Projects
+        </h6>
+      </a>
+
+      <a href="/posts">
+        <h6 class={`${Astro.url.pathname.includes("posts") ? "text-fuchsia-800" : ""} to-animate`}>
+          Posts
+        </h6>
+      </a>
+    </div>
+  </div>
+</nav>
