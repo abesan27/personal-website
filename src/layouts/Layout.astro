@@ -16,7 +16,7 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
 
-  <body class="container">
+  <body class="text-neutral-200 bg-neutral-900">
     <slot />
 
     <style is:global>
@@ -25,38 +25,47 @@ const { title } = Astro.props;
         font-size: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
       }
 
+      ::selection {
+        background: white;
+        color: black;
+      }
       h1 {
         font-size: 42px;
         font-size: 4.2vh;
-        font-weight: 800;
+        font-weight: 600;
       }
 
       h2 {
         font-size: 36px;
         font-size: 3.6vh;
-        font-weight: 700;
+        font-weight: 500;
       }
 
       h3 {
         font-size: 30px;
         font-size: 2.8vh;
-        font-weight: 550;
+        font-weight: 450;
       }
 
       h4 {
         font-size: 24px;
         font-size: 2.5vh;
-        font-weight: 500;
+        font-weight: 400;
       }
 
       h5 {
-        font-size: 20px;
-        font-size: 2vh;
+        font-size: 22px;
+        font-size: 2.2vh;
       }
 
       h6 {
-        font-size: 18px;
-        font-size: 1.8vh;
+        font-size: 17px;
+        font-size: 1.7vh;
+      }
+
+      p {
+        font-size: 16px;
+        font-size: 1.6vh;
       }
     </style>
   </body>

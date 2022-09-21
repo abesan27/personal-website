@@ -1,25 +1,37 @@
-<nav class="sticky top-0 z-50 space-x-8 py-1">
-  <div class="flex items-center justify-between">
-    <a href="/">
-      <h4>
-        <span class="text-fuchsia-800">Albert</span> Stan
-      </h4>
-    </a>
-
-    <div class="flex space-x-5">
-      <a href="/projects">
-        <h6
-          class={`${Astro.url.pathname.includes("projects") ? "text-fuchsia-800" : ""} to-animate`}
-        >
-          Projects
-        </h6>
+<div class="bg-black shadow">
+  <nav class="sticky container top-0 z-50 space-x-8 py-2">
+    <div class="flex items-center justify-between">
+      <a href="/">
+        <h5>
+          <span class="text-transparent bg-clip-text bg-gradient-to-br from-purple-400 to-pink-600">
+            Albert
+          </span> Stan
+        </h5>
       </a>
 
-      <a href="/posts">
-        <h6 class={`${Astro.url.pathname.includes("posts") ? "text-fuchsia-800" : ""} to-animate`}>
-          Posts
-        </h6>
-      </a>
+      <div class="flex space-x-4">
+        <a href="/projects">
+          <h6
+            class={`${
+              Astro.url.pathname.includes("projects")
+                ? ""
+                : "text-neutral-400 hover:text-neutral-200"
+            }`}
+          >
+            Projects
+          </h6>
+        </a>
+
+        <a href="/posts">
+          <h6
+            class={`${
+              Astro.url.pathname.includes("posts") ? "" : "text-neutral-400 hover:text-neutral-200"
+            }`}
+          >
+            Posts
+          </h6>
+        </a>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
+</div>

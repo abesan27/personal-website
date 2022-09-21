@@ -1,0 +1,11 @@
+---
+export interface Props {
+  bg?: string;
+}
+
+const { bg } = Astro.props;
+---
+
+<div class={bg ? bg : "bg-black"}>
+  <div class="container"><slot /></div>
+</div>
