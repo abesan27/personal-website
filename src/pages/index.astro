@@ -3,16 +3,58 @@ import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import Container from "../components/Container.astro";
+import MainProjectCard from "../components/MainProjectCard.astro";
 ---
 
 <Navbar />
 
 <Layout title="Albert Stan - Homepage">
-  <Container><div class="py-10">Homepage</div></Container>
+  <main>
+    <!-- <Container>
+      <div>Hi</div>
+    </Container> -->
 
-  <Container bg="bg-neutral-100 text-black">
-    <div class="py-10">Homepage</div>
+    <Container bg="bg-neutral-100 text-black">
+      <div class="py-5 md:py-10">
+        <div class="flex flex-col md:flex-row">
+          <img
+            class="order-first md:order-last h-44 w-full md:w-1/2 md:h-1/2 ml-auto object-cover"
+            src="/me.png"
+            alt="Me :)"
+          />
 
-    <Footer />
-  </Container>
+          <div class="order-last md:order-first mt-1 md:mt-0">
+            <h2>Hey there! &#128075;</h2>
+            <h5>I'm Albert, a self taught web developer</h5>
+          </div>
+        </div>
+
+        <div class="relative">
+          <img
+            class="absolute w-3/4 -inset-y-2 -right-2 rotate-6"
+            src="/based-here-3.png"
+            alt={`"based here" with arrow pointing to Mallorca, Spain`}
+          />
+
+          <img
+            class="md:w-2/3 mx-auto mt-5 md:mt-10 -ml-28"
+            src="/iphone-map-palma.png"
+            alt="iPhone with Apple Maps pinpointing Mallorca, Spain"
+          />
+        </div>
+      </div>
+    </Container>
+
+    <Container bg="bg-neutral-900">
+      <div class="pt-5 md:pt-10">
+        <MainProjectCard
+          title="Vino"
+          url="/posts/vino-project"
+          description="Lorem ipsum, dolor sit amet consectetur adipisicing elit."
+        />
+      </div>
+
+      <Footer />
+    </Container>
+  </main>
 </Layout>

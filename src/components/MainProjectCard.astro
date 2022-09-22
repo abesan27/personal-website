@@ -1,0 +1,32 @@
+---
+import Button from "./Button.astro";
+
+export interface Props {
+  title: string;
+  description: string;
+  url: string;
+  bg?: string;
+}
+
+const { title, description, url, bg } = Astro.props;
+---
+
+<div class={`${bg ? bg : "bg-black"} shadow rounded-2xl lg:col-span-2 flex`}>
+  <div class="mx-5 md:space-x-12 flex flex-col md:flex-row md:mx-auto">
+    <img
+      class="order-last md:order-first mx-auto w-4/5 md:w-2/5 md:mt-12"
+      src="/iphone-vino.png"
+      alt="iOS Vino App"
+    />
+
+    <div class="order-first md:order-last my-5 md:my-auto">
+      <div class="mb-3 md:mb-5">
+        <h2>{title}</h2>
+
+        <h5 class="text-neutral-400">{description}</h5>
+      </div>
+
+      <Button text="Learn more" url={url} />
+    </div>
+  </div>
+</div>

@@ -2,6 +2,7 @@
 import Button from "../../components/Button.astro";
 import Container from "../../components/Container.astro";
 import Footer from "../../components/Footer.astro";
+import MainProjectCard from "../../components/MainProjectCard.astro";
 import Navbar from "../../components/Navbar.astro";
 import Layout from "../../layouts/Layout.astro";
 ---
@@ -11,27 +12,11 @@ import Layout from "../../layouts/Layout.astro";
 <Layout title="Albert Stan - Projects">
   <Container bg="bg-neutral-900">
     <div class="grid lg:grid-cols-2 gap-4 mt-10">
-      <div class="bg-black shadow rounded-2xl lg:col-span-2 flex">
-        <div class="w-4/5 md:space-x-12 flex flex-col md:flex-row mx-auto">
-          <img
-            class="order-last md:order-first mx-auto w-4/5 md:w-2/5 md:mt-12"
-            src="/iphone-vino.png"
-            alt="iOS Vino App"
-          />
-
-          <div class="order-first md:order-last my-8 md:my-auto">
-            <div class="mb-5">
-              <h2>Vinatural</h2>
-
-              <h5 class="text-neutral-400">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              </h5>
-            </div>
-
-            <Button text="Learn more" url="/posts/vino-project" />
-          </div>
-        </div>
-      </div>
+      <MainProjectCard
+        title="Vinatural"
+        url="/posts/vino-project"
+        description="Lorem ipsum, dolor sit amet consectetur adipisicing elit."
+      />
     </div>
   </Container>
 </Layout>

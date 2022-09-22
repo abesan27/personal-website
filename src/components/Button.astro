@@ -7,7 +7,10 @@ export interface Props {
 const { text, url } = Astro.props;
 ---
 
-<a href={url} class="group inline-flex items-center transition hover:underline decoration-blue-500">
+<a
+  href={url}
+  class="group inline-flex items-center transition hover:underline decoration-amber-500"
+>
   {text}
   <svg
     class="mt-0.5 ml-2 -mr-1 stroke-white stroke-2"

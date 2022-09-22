@@ -25,8 +25,13 @@ const { title } = Astro.props;
         font-size: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
       }
 
+      code {
+        font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+          Bitstream Vera Sans Mono, Courier New, monospace;
+      }
+
       ::selection {
-        background: white;
+        background: #f59e0b;
         color: black;
       }
       h1 {
