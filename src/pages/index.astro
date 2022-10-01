@@ -26,7 +26,7 @@ import TechCard from "../components/TechCard.astro";
           </div>
         </div>
 
-        <div class="relative">
+        <div class="relative md:w-1/2">
           <img
             class="absolute w-3/4 -inset-y-2 -right-2 rotate-6"
             src="/based-here-3.png"
@@ -34,7 +34,7 @@ import TechCard from "../components/TechCard.astro";
           />
 
           <img
-            class="md:w-2/3 mx-auto mt-5 md:mt-10 -ml-28"
+            class="md:w-2/3 mx-auto mt-5 md:mt-10 -ml-28 md:ml-0"
             src="/iphone-map-palma.png"
             alt="iPhone with Apple Maps pinpointing Mallorca, Spain"
           />
@@ -44,32 +44,71 @@ import TechCard from "../components/TechCard.astro";
 
     <Container bg="bg-neutral-900">
       <div id="experiences-and-technologies" class="py-5 md:py-10">
-        <h3>Experiences & Technologies</h3>
-
-        <div class="flex items-center py-5">
+        <div class="flex justify-around items-center py-5">
           <h5 class="w-3/4">
-            I have experience working with JavaScript & TypeScript in full-stack applications, and
-            I'm currently working on implementing iOS apps in Swift.
+            I have experience working with JavaScript & TypeScript in full-stack web applications,
+            and I'm currently learning to implement iOS apps in Swift.
           </h5>
 
-          <div class="w-1/4 space-y-3">
-            <img class="h-12 mx-auto rounded" src="/tech/javascript-logo.jpg" alt="" />
-            <img class="h-12 mx-auto rounded" src="/tech/typescript-logo.jpg" alt="" />
-            <img class="h-12 mx-auto rounded" src="/tech/swift-logo.svg" alt="" />
+          <div class="space-y-3">
+            <img class="h-12 ml-auto rounded" src="/tech/javascript-logo.jpg" alt="" />
+            <img class="h-12 ml-auto rounded" src="/tech/typescript-logo.jpg" alt="" />
+            <img class="h-12 ml-auto rounded" src="/tech/swift-logo.svg" alt="" />
           </div>
         </div>
 
-        <div>
-          <h4 class="text-center py-5">Lorem ipsum dolor sit amet.</h4>
+        <!-- <div class="flex items-center">
+          <div class="flex space-x-3 mx-auto">
+            <img class="h-12 mx-auto rounded" src="/tech/react-logo.jpg" alt="" />
+            <img class="h-12 mx-auto rounded" src="/tech/svelte-logo.jpg" alt="" />
+            <img class="h-12 mx-auto rounded" src="/tech/astro-logo.jpg" alt="" />
+          </div>
+        </div> -->
 
-          <div class="flex justify-around space-x-3">
+        <div>
+          <h4 class="text-center py-3">Frameworks & Technologies</h4>
+
+          <div class="tech-slideshow h-14 py-2">
+            <div class="mover-1">
+              <div class="flex justify-around items-center space-x-3 pb-1">
+                <!-- frontend technologies -->
+                <img class="h-12 rounded" src="/tech/html-logo.jpg" alt="" />
+                <img class="h-12 rounded" src="/tech/css-logo.jpg" alt="" />
+                <img class="h-12 rounded" src="/tech/react-logo.jpg" alt="" />
+                <img class="h-12 rounded" src="/tech/svelte-logo.jpg" alt="" />
+                <img class="h-12 rounded" src="/tech/astro-logo.jpg" alt="" />
+
+                <!-- backend technologies -->
+                <img class="h-12 rounded" src="/tech/postgres-logo.jpg" alt="" />
+                <img class="h-12 rounded" src="/tech/redis-logo.jpg" alt="" />
+                <img class="h-12 rounded" src="/tech/graphql-logo.jpg" alt="" />
+                <img class="h-12 rounded" src="/tech/git-logo.jpg" alt="" />
+
+                <!-- here to complete loop -->
+                <img class="h-12 rounded" src="/tech/html-logo.jpg" alt="" />
+                <img class="h-12 rounded" src="/tech/css-logo.jpg" alt="" />
+                <img class="h-12 rounded" src="/tech/react-logo.jpg" alt="" />
+                <img class="h-12 rounded" src="/tech/svelte-logo.jpg" alt="" />
+                <img class="h-12 rounded" src="/tech/astro-logo.jpg" alt="" />
+                <img class="h-12 rounded" src="/tech/postgres-logo.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="flex justify-center space-x-4 mb-3.5">
+            <img class="h-12 rounded" src="/tech/react-logo.jpg" alt="" />
+            <img class="h-12 rounded" src="/tech/svelte-logo.jpg" alt="" />
+            <img class="h-12 rounded" src="/tech/astro-logo.jpg" alt="" />
+          </div>
+
+          <div class="flex justify-around space-x-3 pb-1">
             <img class="h-12 rounded" src="/tech/postgres-logo.jpg" alt="" />
             <img class="h-12 rounded" src="/tech/redis-logo.jpg" alt="" />
             <img class="h-12 rounded" src="/tech/graphql-logo.jpg" alt="" />
             <img class="h-12 rounded" src="/tech/git-logo.jpg" alt="" />
-          </div>
+          </div> -->
 
-          <img src="/mac-xcode.png" alt="" />
+          <img src="/mac-vscode.png" alt="" />
         </div>
       </div>
     </Container>
@@ -93,8 +132,12 @@ import TechCard from "../components/TechCard.astro";
   </main>
 
   <Container bg="bg-neutral-100 text-black">
-    <div id="contact-me" class="py-5 md:py-10">
-      <h5>Contact</h5>
+    <div id="on-the-web" class="py-5 md:py-10">
+      <h3 class="mb-5">Find me around the web! &#129302;</h3>
+
+      <a class="bg-neutral-300 mt-5 py-1.5 px-2 rounded-lg" href="https://github.com/abesan27">
+        Github
+      </a>
     </div>
   </Container>
 
@@ -110,3 +153,32 @@ import TechCard from "../components/TechCard.astro";
     <Footer />
   </Container>
 </Layout>
+
+<style>
+  .tech-slideshow {
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .tech-slideshow > div {
+    height: 200px;
+    width: 1200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: translate3d(0, 0, 0);
+  }
+  .tech-slideshow .mover-1 {
+    animation: moveSlideshow 14s linear infinite;
+  }
+
+  @keyframes moveSlideshow {
+    100% {
+      transform: translateX(-64%);
+    }
+  }
+</style>
